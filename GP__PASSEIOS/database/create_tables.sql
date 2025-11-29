@@ -1,0 +1,20 @@
+CREATE TABLE tours (
+id INT IDENTITY(1,1) PRIMARY KEY,
+title VARCHAR(120) NOT NULL,
+description TEXT NOT NULL,
+durationHours FLOAT NOT NULL,
+price FLOAT NOT NULL,
+location VARCHAR(120),
+idealTime VARCHAR(120)
+);
+
+
+CREATE TABLE bookings (
+id INT IDENTITY(1,1) PRIMARY KEY,
+clientName VARCHAR(120) NOT NULL,
+clientEmail VARCHAR(120) NOT NULL,
+tour_id INT NOT NULL,
+date VARCHAR(50) NOT NULL,
+createdAt DATETIME DEFAULT GETDATE(),
+FOREIGN KEY (tour_id) REFERENCES tours(id)
+);
