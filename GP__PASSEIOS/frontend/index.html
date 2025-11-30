@@ -1,4 +1,4 @@
-<!DOCTYPE html>z
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +8,53 @@
 </head>
 <body>
 <h1>GP Passeios - João Pessoa</h1>
+<main>
+    <section id="tours">
+        <h2>Nossos Passeios</h2>
+        <div class="tour-list">
+            <article class="tour-card">
+                <img src="https://via.placeholder.com/300x200" alt="Passeio para as Piscinas Naturais do Seixas">
+                <h3>Piscinas Naturais do Seixas</h3>
+                <p>Descubra a beleza das piscinas naturais no ponto mais oriental das Américas.</p>
+                <p class="price">R$ 75,00</p>
+                <button>Ver detalhes</button>
+            </article>
+            <article class="tour-card">
+                <img src="https://via.placeholder.com/300x200" alt="Passeio de Barco na Praia do Jacaré">
+                <h3>Pôr do Sol na Praia do Jacaré</h3>
+                <p>Viva a emoção de assistir ao pôr do sol ao som do Bolero de Ravel.</p>
+                <p class="price">R$ 50,00</p>
+                <button>Ver detalhes</button>
+            </article>
+            <article class="tour-card">
+                <img src="https://via.placeholder.com/300x200" alt="Passeio para a Costa do Conde">
+                <h3>Litoral Sul - Costa do Conde</h3>
+                <p>Explore as praias paradisíacas da Costa do Conde, como Coqueirinho e Tambaba.</p>
+                <p class="price">R$ 90,00</p>
+                <button>Ver detalhes</button>
+            </article>
+        </div>
+    </section>
 
+    <section id="booking">
+        <h2>Faça sua Reserva</h2>
+        <form id="booking-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
 
-<section id="tours"></section>
-<section id="details"></section>
-<section id="booking"></section>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="tour-select">Escolha o Passeio:</label>
+            <select id="tour-select" name="tour">
+                <option value="seixas">Piscinas Naturais do Seixas</option>
+                <option value="jacare">Pôr do Sol na Praia do Jacaré</option>
+                <option value="conde">Litoral Sul - Costa do Conde</option>
+            </select>
+
+            <button type="submit">Reservar Agora</button>
+        </form>
+    </section>
+</main>
 </body>
 </html>
