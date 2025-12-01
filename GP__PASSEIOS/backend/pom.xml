@@ -29,8 +29,14 @@
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
-            <version>12.6.1.jre11</version>
+            <version>12.6.2.jre11</version>
+            <optional>true</optional>
         </dependency>
+        <dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <scope>runtime</scope>
+</dependency>
     </dependencies>
     <properties>
         <java.version>21</java.version> 
@@ -41,6 +47,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.gp.passeios.PasseiosApplication</mainClass> <!-- Substitua se o nome da sua classe for diferente -->
+                </configuration>
             </plugin>
         </plugins>
     </build>
